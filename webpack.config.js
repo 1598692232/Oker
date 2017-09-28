@@ -6,8 +6,9 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 // const ManifestPlugin = require('webpack-manifest-plugin')
 
 module.exports = {
-    entry: path.resolve(__dirname, './app/main.js'),
-    output: {
+	entry: './app/main.js',
+
+	output: {
         path: path.resolve(__dirname, './build'),
         filename: 'bundle.js',
     },
@@ -49,12 +50,15 @@ module.exports = {
 		// 	fileName: 'bundle_map',
 		// 	basePath: 'bundle_map'
 		// }),
+		// new webpack.optimize.CommonsChunkPlugin({
+		// 	name: 'common' // 指定公共 bundle 的名称。
+		// }),
 		new CleanWebpackPlugin(['build']),
 		new HtmlWebpackPlugin({
 			title: 'Output Management',
 			template: 'index.html'
 		}),
 		new webpack.HotModuleReplacementPlugin(),
-		new UglifyJSPlugin()
+		// new UglifyJSPlugin(),
     ]
 };
