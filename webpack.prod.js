@@ -5,7 +5,6 @@ const webpack = require('webpack');
 const merge = require('webpack-merge');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
@@ -20,9 +19,10 @@ module.exports = merge(common, {
 		  	}
 	  	}),
 		new CleanWebpackPlugin(['dist']),
-		new HtmlWebpackPlugin({
-			title: 'Production',
-			template: 'index.html'
+		new webpack.HashedModuleIdsPlugin({
+			hashFunction: 'sha256',
+			hashDigest: 'hex',
+			hashDigestLength: 20
 		})
     ]
 });

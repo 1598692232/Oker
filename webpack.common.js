@@ -2,11 +2,17 @@
  * Created by bll on 2017/9/28.
  */
 const path = require('path');
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const ManifestPlugin = require('webpack-manifest-plugin')
 
 module.exports = {
 	entry: {
-		app: './app/main.js'
+		app: './app/main.js',
+		vendor: [
+		    'react',
+			'react-dom'
+		]
 	},
 	module: {
 		loaders: [{
@@ -36,7 +42,20 @@ module.exports = {
 		}]
 	},
 	output: {
-	  	filename: '[name].bundle.js',
+	  	filename: '[name].[hash].js',
 		path: path.resolve(__dirname, 'dist')
-	}
+	},
+	plugins: [
+		new HtmlWebpackPlugin({
+			title: 'Production',
+			template: 'index.html'
+		}),
+		new webpack.optimize.CommonsChunkPlugin({
+			name: 'vendor'
+		}),
+		new webpack.optimize.CommonsChunkPlugin({
+			name: 'common'
+		}),
+
+	]
 };

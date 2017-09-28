@@ -50,9 +50,9 @@ module.exports = {
 		// 	fileName: 'bundle_map',
 		// 	basePath: 'bundle_map'
 		// }),
-		// new webpack.optimize.CommonsChunkPlugin({
-		// 	name: 'common' // 指定公共 bundle 的名称。
-		// }),
+		new webpack.optimize.CommonsChunkPlugin({
+			name: 'common' // 指定公共 bundle 的名称。
+		}),
 		new CleanWebpackPlugin(['build']),
 		new HtmlWebpackPlugin({
 			title: 'Output Management',
