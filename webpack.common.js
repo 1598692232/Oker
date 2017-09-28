@@ -14,6 +14,7 @@ module.exports = {
 			'react-dom'
 		]
 	},
+
 	module: {
 		loaders: [{
 			test: /\.jsx?$/,
@@ -41,10 +42,12 @@ module.exports = {
 			]
 		}]
 	},
+
 	output: {
-	  	filename: '[name].[hash].js',
+	  	filename: '[name].bundle.js',
 		path: path.resolve(__dirname, 'dist')
 	},
+
 	plugins: [
 		new HtmlWebpackPlugin({
 			title: 'Production',
@@ -57,5 +60,14 @@ module.exports = {
 			name: 'common'
 		}),
 
-	]
+	],
+
+	resolve: {
+		alias: {
+			assets: path.resolve(__dirname, './assets'),
+			css: path.resolve(__dirname, './assets/css'),
+			img: path.resolve(__dirname, './assets/img'),
+			app: path.resolve(__dirname, './app')
+		}
+	}
 };

@@ -1,6 +1,7 @@
 /**
  * Created by bll on 2017/9/28.
  */
+const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
@@ -8,7 +9,11 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
-	devtool: 'cheap-module-source-map',
+	// devtool: 'cheap-module-source-map',
+	output: {
+		filename: '[name].[hash].js',
+		path: path.resolve(__dirname, 'dist')
+	},
     plugins: [
 	  	new UglifyJSPlugin({
 		  	sourceMap: true

@@ -1,7 +1,7 @@
 import React,{ Component } from 'react'
 import { render } from 'react-dom'
-import manager from '../../assets/img/manager.png'
-import '../../assets/css/test.css'
+import manager from 'img/manager.png'
+import 'css/test.css'
 
 export default class ProductBox extends Component {
     constructor(props) {
