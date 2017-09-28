@@ -2,6 +2,7 @@
  * Created by bll on 2017/9/28.
  */
 const path = require('path');
+// const ManifestPlugin = require('webpack-manifest-plugin')
 
 module.exports = {
 	entry: {
