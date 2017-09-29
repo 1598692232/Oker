@@ -14,6 +14,15 @@ module.exports = merge(common, {
 	},
 	plugins: [
 		new webpack.HotModuleReplacementPlugin(),
-		new webpack.NamedModulesPlugin()
-	]
+		new webpack.NamedModulesPlugin(),
+	],
+
+	module: {
+		loaders: [{
+			test: /\.js$/,
+			exclude: /node_modules/,
+			loaders: ['babel-loader', 'eslint-loader']
+		}]
+	},
+
 });
