@@ -1,5 +1,5 @@
 # Oker
-前端架构
+react + eslint + redux 前端架构
 
 
 ```
