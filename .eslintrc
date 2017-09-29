@@ -38,10 +38,7 @@
     "semi": [2, "never"],
     "no-unused-vars": 0,
     "import/no-unresolved": 0,
-    "react/jsx-indent": [
-      2,
-      "tab"
-    ],
+    "react/jsx-indent": [2, "tab"],
     "react/prefer-stateless-function": 0,
     "no-useless-constructor": 0,
     "no-trailing-spaces": 0,
