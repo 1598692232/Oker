@@ -19,7 +19,7 @@ module.exports = merge(common, {
 
 	module: {
 		loaders: [{
-			test: /\.js$/,
+			test: /\.(js|es6|jsx)$/,
 			exclude: /node_modules/,
 			loaders: ['babel-loader', 'eslint-loader']
 		}]

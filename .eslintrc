@@ -28,7 +28,7 @@
     "linebreak-style": ["error", "windows"],
     "no-tabs":"off",
     "no-console": "off",
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", "es6"] }],
     "no-undef": "off",
     "eol-last": 0,
     "jsx-a11y/href-no-hash": 0,
