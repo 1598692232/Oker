@@ -25,7 +25,7 @@
   "rules":{
     "indent": [2, "tab"],
     "comma-dangle":["error","never"],
-    "linebreak-style": ["error", "windows"],
+    "linebreak-style": 0,
     "no-tabs":"off",
     "no-console": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", "es6"] }],
@@ -43,6 +43,11 @@
     "no-useless-constructor": 0,
     "no-trailing-spaces": 0,
     "prefer-const": 0,
-    "no-new": "off"
+    "no-new": "off",
+    "import/no-duplicates": "off",
+    "no-plusplus": 0,
+    "no-param-reassign": 0,
+    "import/first": 0,
+    "react/prop-types": 0
   }
 }

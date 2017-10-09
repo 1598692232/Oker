@@ -66,7 +66,9 @@ module.exports = {
 			assets: path.resolve(__dirname, './assets'),
 			css: path.resolve(__dirname, './assets/css'),
 			img: path.resolve(__dirname, './assets/img'),
-			app: path.resolve(__dirname, './app')
+			app: path.resolve(__dirname, './app'),
+			actions: path.resolve(__dirname, './store/actions'),
+			reducer: path.resolve(__dirname, './store/reducer')
 		}
 	}
 };
