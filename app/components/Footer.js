@@ -21,16 +21,16 @@
 //
 // 	render() {
 // 		return (
-// 			<p>
-// 				Show:
-// 				{' '}
-// 				{this.renderFilter('SHOW_ALL', 'All')}
-// 				{', '}
-// 				{this.renderFilter('SHOW_COMPLETED', 'Completed')}
-// 				{', '}
-// 				{this.renderFilter('SHOW_ACTIVE', 'Active')}
-// 				.
-// 			</p>
+			{/*<p>*/}
+				{/*Show:*/}
+				{/*{' '}*/}
+				{/*{this.renderFilter('SHOW_ALL', 'All')}*/}
+				{/*{', '}*/}
+				{/*{this.renderFilter('SHOW_COMPLETED', 'Completed')}*/}
+				{/*{', '}*/}
+				{/*{this.renderFilter('SHOW_ACTIVE', 'Active')}*/}
+				{/*.*/}
+			{/*</p>*/}
 // 		)
 // 	}
 // }
