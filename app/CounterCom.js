@@ -42,13 +42,6 @@ class Counter extends Component {
 	}
 }
 
-function selectTodos(todos) {
-	return todos
-}
-
-function setActiveTab(show) {
-	return show
-}
 
 function select(state) {
 	console.log(state, 999)

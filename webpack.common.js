@@ -68,7 +68,8 @@ module.exports = {
 			img: path.resolve(__dirname, './assets/img'),
 			app: path.resolve(__dirname, './app'),
 			actions: path.resolve(__dirname, './store/actions'),
-			reducer: path.resolve(__dirname, './store/reducer')
+			reducer: path.resolve(__dirname, './store/reducer'),
+			state: path.resolve(__dirname, './store/state'),
 		}
 	}
 };
