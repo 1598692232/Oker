@@ -1,7 +1,7 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
-import App from './CounterCom'
+import App from './components/CounterCom'
 
 import configureStore from 'state/test'
 
