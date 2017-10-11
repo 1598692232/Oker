@@ -24,12 +24,10 @@ class Counter extends Component {
 		)
 	}
 
-
-
 	render() {
 		const { dispatch, count, data } = this.props
 		let list = []
-		for (var i in data.item ) {
+		for (let i in data.item) {
 			list.push(
 				data.item[i]
 			)

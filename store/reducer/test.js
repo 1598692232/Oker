@@ -23,12 +23,12 @@ function getTab(state = false, action) {
 }
 
 function getData(state = {
-					item: []
-				 }, action) {
+	item: []
+ 	}, action) {
 	switch (action.type) {
 	case SHOW_DATA:
 		return Object.assign({}, state, {
-			item: action.data,
+			item: action.data
 		})
 	default:
 		return state
