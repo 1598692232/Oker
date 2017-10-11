@@ -2,7 +2,7 @@
  * Created by bll on 2017/10/9.
  */
 import { combineReducers } from 'redux'
-import { ADD_TODO, TAB_ONE } from 'actions/test.js'
+import { ADD_TODO, TAB_ONE, SHOW_DATA } from 'actions/test.js'
 
 function add(state = 0, action) {
 	switch (action.type) {
@@ -22,9 +22,23 @@ function getTab(state = false, action) {
 	}
 }
 
+function getData(state = {
+					item: []
+				 }, action) {
+	switch (action.type) {
+	case SHOW_DATA:
+		return Object.assign({}, state, {
+			item: action.data,
+		})
+	default:
+		return state
+	}
+}
+
 const todoApp = combineReducers({
 	add,
-	getTab
+	getTab,
+	getData
 })
 
 export default todoApp

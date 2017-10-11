@@ -18,34 +18,39 @@
 // 	document.getElementById('content')
 // )
 
-// import React from 'react'
-// import { render } from 'react-dom'
-// import { createStore } from 'redux'
-// import { Provider } from 'react-redux'
-// import App from './CounterCom'
+import React from 'react'
+import { render } from 'react-dom'
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import App from './CounterCom'
 // import todoApp from 'reducer/test.js'
 // import App from './components/App'
 // import todoApp from 'reducer/reducer.js'
 
+import configureStore from 'state/test'
+
+
 
 // let store = createStore(todoApp)
-//
-// let rootElement = document.getElementById('root')
-// render(
-// 	<Provider store={store}>
-// 		<App />
-// 	</Provider>,
-// 	rootElement
-// )
+
+const store = configureStore()
+
+let rootElement = document.getElementById('content')
+render(
+	<Provider store={store}>
+		<App />
+	</Provider>,
+	rootElement
+)
 
 
 
 // import 'babel-core/polyfill'
-import React from 'react'
-import { render } from 'react-dom'
-import Root from './demo/Root'
-
-render(
-	<Root />,
-	document.getElementById('content')
-)
+// import React from 'react'
+// import { render } from 'react-dom'
+// import Root from './demo/Root'
+//
+// render(
+// 	<Root />,
+// 	document.getElementById('content')
+// )
