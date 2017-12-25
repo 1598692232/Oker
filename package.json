@@ -45,6 +45,7 @@
     "webpack-merge": "^4.1.0"
   },
   "dependencies": {
+    "open-browser-webpack-plugin": "^0.0.5",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-redux": "^5.0.6",

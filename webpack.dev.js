@@ -4,6 +4,7 @@
 const webpack = require('webpack')
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
+var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 module.exports = merge(common, {
 	devtool: 'cheap-module-eval-source-map',
@@ -15,6 +16,7 @@ module.exports = merge(common, {
 	plugins: [
 		new webpack.HotModuleReplacementPlugin(),
 		new webpack.NamedModulesPlugin(),
+		new OpenBrowserPlugin({ url: 'http://localhost:8080' })
 	],
 
 	module: {

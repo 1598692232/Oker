@@ -3,12 +3,12 @@
  */
 const path = require('path');
 const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const ManifestPlugin = require('webpack-manifest-plugin')
-
+console.log(12321312312)
 module.exports = {
 	entry: {
-		app: './app/main.js',
+		app: './app/main.js', 
+		home: "./app/home.js",
 		vendor: [
 		    'react',
 			'react-dom'
@@ -17,11 +17,10 @@ module.exports = {
 
 	module: {
 		loaders: [{
-			test: /\.（js|es6|jsx）?$/,
+			test: /\.(js|es6|jsx)?$/,
 			exclude: /node_modules/,
 			loader: 'babel-loader',
-			query:
-				{
+			query:{
 					presets: ['es2015','react']
 				}
 		}, {
@@ -45,14 +44,10 @@ module.exports = {
 
 	output: {
 	  	filename: '[name].bundle.js',
-		path: path.resolve(__dirname, 'dist')
+		path: path.resolve(__dirname, 'static')
 	},
 
 	plugins: [
-		new HtmlWebpackPlugin({
-			title: 'Production',
-			template: 'index.html'
-		}),
 		new webpack.optimize.CommonsChunkPlugin({
 			name: 'vendor'
 		}),
