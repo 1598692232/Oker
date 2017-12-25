@@ -14,3 +14,8 @@ npm run dev
 # build for production and view the bundle analyzer report
 npm run build
 ```
+
+
+##注意
+master 为单页面配置
+dev_xy 多页面配置
