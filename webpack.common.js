@@ -4,10 +4,10 @@
 const path = require('path');
 const webpack = require('webpack')
 // const ManifestPlugin = require('webpack-manifest-plugin')
-console.log(12321312312)
+
 module.exports = {
 	entry: {
-		app: './app/main.js', 
+		index: './app/main.js', 
 		home: "./app/home.js",
 		vendor: [
 		    'react',
@@ -40,11 +40,6 @@ module.exports = {
 				}
 			]
 		}]
-	},
-
-	output: {
-	  	filename: '[name].bundle.js',
-		path: path.resolve(__dirname, 'static')
 	},
 
 	plugins: [
