@@ -16,8 +16,8 @@ console.log(window, 'window')
 console.log(global, 'global')
 // http://localhost:8888
 // http://www.uxinyue.com:81
-var host = 'http://10.255.1.24:8888/';
-console.log('upload已更新2')
+var host = 'http://www.uxinyue.com:81';
+console.log('upload已更新3')
 window.ossUploader = function (param, filePath, getMid, progressCallback, done, errCallback) {
 	// console.log(param, 'param')
 	var filename = path.basename(filePath);

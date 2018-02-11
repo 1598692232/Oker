@@ -9,7 +9,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	entry: {
-		app: './app/adb.js',
+		app: './app/upload.js',
 	},
 
 	module: {

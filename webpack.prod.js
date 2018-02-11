@@ -11,12 +11,12 @@ const common = require('./webpack.common.js');
 module.exports = merge(common, {
 	// devtool: 'cheap-module-source-map',
 	output: {
-		filename: 'adb.v1.0.min.js',
+		filename: 'upload.v1.02.min.js',
 		path: path.resolve(__dirname, 'dist')
 	},
 	target: 'node',
     plugins: [
-	  	new UglifyJSPlugin(),
+	  	// new UglifyJSPlugin(),
 	  	new webpack.DefinePlugin({
 		  	'process.env': {
 				'NODE_ENV': JSON.stringify('production')
