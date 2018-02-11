@@ -5,18 +5,19 @@
 // var path = require('path');
 // var request = require('request');
 // var qs = require('querystring');  
-
+import "babel-polyfill";
 import fs from 'fs';
 import co from 'co';
 import OSS from 'ali-oss';
 import path from 'path';
 import request from 'request';
 import qs from 'querystring';
-
+console.log(window, 'window')
+console.log(global, 'global')
 // http://localhost:8888
 // http://www.uxinyue.com:81
-var host = 'http://www.uxinyue.com:81/';
-console.log('upload已更新')
+var host = 'http://10.255.1.24:8888/';
+console.log('upload已更新2')
 window.ossUploader = function (param, filePath, getMid, progressCallback, done, errCallback) {
 	// console.log(param, 'param')
 	var filename = path.basename(filePath);

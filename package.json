@@ -4,7 +4,7 @@
   "description": "新阅前端架构",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config webpack.prod.js",
+    "build": "webpack --config webpack.prod.js && cd dist && babel adb.v1.0.min.js -o adb.v1.0.min.js",
     "dev": "webpack-dev-server --open --config webpack.dev.js"
   },
   "repository": {

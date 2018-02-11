@@ -1,6 +1,6 @@
 var request = require('request');
 
-var host = 'http://www.uxinyue.com:81';
+var host = 'http://10.255.1.24:8888';
 console.log(host + '/adb/mainfest.json');
 var options = {
     　　　　　　　method: 'get',
@@ -12,7 +12,7 @@ var options = {
 
 request(options, function (err, res, body) {
     var version = JSON.parse(body).js_version;
-    console.log(version, 'version', '1.01');
+    console.log(version, 'version', '1.02');
     loadCSS(host + '/adb/index.' + version + '.css', function() {
         console.log('远程index.' + version + 'css加载成功');
         loadJS(host + '/adb/upload.' + version + '.min.js', function() {

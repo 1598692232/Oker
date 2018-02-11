@@ -1,8 +1,9 @@
 /**
  * Created by bll on 2017/9/28.
  */
+var babelpolyfill = require("babel-polyfill");
 const path = require('path');
-const webpack = require('webpack')
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const ManifestPlugin = require('webpack-manifest-plugin')
 
@@ -18,7 +19,7 @@ module.exports = {
 			loader: 'babel-loader',
 			query:
 				{
-					presets: ['es2015', 'stage-0']
+					presets: ['es2015']
 				}
 		}, {
 			test: /\.css$/,
