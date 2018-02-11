@@ -8,7 +8,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	entry: {
-		app: './app/main.js',
+		app: './app/upload.js',
 		vendor: [
 		    'react',
 			'react-dom'
@@ -22,7 +22,7 @@ module.exports = {
 			loader: 'babel-loader',
 			query:
 				{
-					presets: ['es2015','react']
+					presets: ['es2015', 'stage-0']
 				}
 		}, {
 			test: /\.css$/,
@@ -42,6 +42,7 @@ module.exports = {
 			]
 		}]
 	},
+	
 
 	output: {
 	  	filename: '[name].bundle.js',
@@ -53,12 +54,12 @@ module.exports = {
 			title: 'Production',
 			template: 'index.html'
 		}),
-		new webpack.optimize.CommonsChunkPlugin({
-			name: 'vendor'
-		}),
-		new webpack.optimize.CommonsChunkPlugin({
-			name: 'common'
-		})
+		// new webpack.optimize.CommonsChunkPlugin({
+		// 	name: 'vendor'
+		// }),
+		// new webpack.optimize.CommonsChunkPlugin({
+		// 	name: 'common'
+		// })
 	],
 
 	resolve: {

@@ -11,23 +11,22 @@ const common = require('./webpack.common.js');
 module.exports = merge(common, {
 	// devtool: 'cheap-module-source-map',
 	output: {
-		filename: '[name].[hash].js',
+		filename: '[name].js',
 		path: path.resolve(__dirname, 'dist')
 	},
+	target: 'node',
     plugins: [
-	  	new UglifyJSPlugin({
-		  	sourceMap: true
-	  	}),
+	  	new UglifyJSPlugin(),
 	  	new webpack.DefinePlugin({
 		  	'process.env': {
 				'NODE_ENV': JSON.stringify('production')
 		  	}
 	  	}),
 		new CleanWebpackPlugin(['dist']),
-		new webpack.HashedModuleIdsPlugin({
-			hashFunction: 'sha256',
-			hashDigest: 'hex',
-			hashDigestLength: 20
-		})
+		// new webpack.HashedModuleIdsPlugin({
+		// 	hashFunction: 'sha256',
+		// 	hashDigest: 'hex',
+		// 	hashDigestLength: 20
+		// })
     ]
 });
