@@ -8,11 +8,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	entry: {
-		app: './app/upload.js',
-		vendor: [
-		    'react',
-			'react-dom'
-		]
+		app: './app/adb.js',
 	},
 
 	module: {

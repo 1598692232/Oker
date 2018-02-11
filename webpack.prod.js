@@ -11,7 +11,7 @@ const common = require('./webpack.common.js');
 module.exports = merge(common, {
 	// devtool: 'cheap-module-source-map',
 	output: {
-		filename: '[name].js',
+		filename: 'adb.v1.0.min.js',
 		path: path.resolve(__dirname, 'dist')
 	},
 	target: 'node',

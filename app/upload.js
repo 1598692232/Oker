@@ -16,7 +16,7 @@ import qs from 'querystring';
 // http://localhost:8888
 // http://www.uxinyue.com:81
 var host = 'http://www.uxinyue.com:81/';
-
+console.log('upload已更新')
 window.ossUploader = function (param, filePath, getMid, progressCallback, done, errCallback) {
 	// console.log(param, 'param')
 	var filename = path.basename(filePath);
