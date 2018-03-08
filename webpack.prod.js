@@ -11,7 +11,7 @@ const common = require('./webpack.common.js');
 module.exports = merge(common, {
 	// devtool: 'cheap-module-source-map',
 	output: {
-		filename: 'upload.v1.02.min.js',
+		filename: 'upload.v1.03.min.js',
 		path: path.resolve(__dirname, 'dist')
 	},
 	target: 'node',
