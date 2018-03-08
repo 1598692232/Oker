@@ -45,7 +45,9 @@ window.ossUploader = function (param, filePath, getMid, progressCallback, done, 
 		if (err) {
 			console.log(err)
 		}else {
+			console.log(body, 'body');
 			var json = JSON.parse(body).data;
+			console.log(json, 'json');
 			var doc_id = json.doc_id;
 			typeof getMid == 'function' && getMid(json.object_key, filePath);
 			
